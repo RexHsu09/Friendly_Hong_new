@@ -185,6 +185,7 @@ fun HomepageScreen(
         ) {
             Image(
                 painter = painterResource(id = R.drawable.app_background),
+                contentScale = ContentScale.Crop,
                 contentDescription = null,
                 modifier = Modifier.fillMaxSize()
             )

@@ -77,7 +77,7 @@ fun BottomMenu(
             modifier = modifier.fillMaxWidth()
         )
         Row(
-            horizontalArrangement = Arrangement.spacedBy(16.dp),
+            horizontalArrangement = Arrangement.SpaceAround,
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier
                 .padding(8.dp)

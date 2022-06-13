@@ -18,6 +18,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.material.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
@@ -56,7 +57,7 @@ fun TasksButton(
                 )
                 Text(
                     text = "Tasks",
-                    style = MaterialTheme.typography.h6,
+                    style = MaterialTheme.typography.h6.copy(fontSize = 10.sp),
                     modifier = Modifier.offset(y = (-4).dp)
                 )
             }
@@ -90,7 +91,7 @@ fun MembersButton(
                 )
                 Text(
                     text = "Members",
-                    style = MaterialTheme.typography.h6,
+                    style = MaterialTheme.typography.h6.copy(fontSize = 10.sp),
                     modifier = Modifier.offset(y = (-10).dp)
                 )
             }
@@ -359,10 +360,7 @@ fun InsideGroupScreen(
             verticalArrangement = Arrangement.spacedBy(24.dp),
             modifier = Modifier.align(Alignment.Center)
         ) {
-            Box(modifier = Modifier.offset(x = 100.dp, y = -60.dp)){
-                CollectBook(
-                    onClick = { navController.navigate(Screen.CardCollectionScreen.route) }
-                )
+            Box(modifier = Modifier.offset(x = 100.dp, y = (-60).dp)){
             }
             MonstersInParkRow(groupViewModel)
             Egg(readyToHatch = groupViewModel.readyToHatch)
@@ -385,6 +383,7 @@ fun InsideGroupScreen(
                     showCollectCard = true
                 },
                 progress = groupViewModel.hatchProgress,
+                //progress = 1f, // For demo
                 modifier = Modifier.offset(y = 5.dp)
             )
         }

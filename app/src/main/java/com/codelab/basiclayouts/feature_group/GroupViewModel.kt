@@ -235,3 +235,7 @@ val messageList = listOf(
     MessageData(R.drawable.member_1, "2", "Let's go!"),
     MessageData(R.drawable.friend_2, "3", "You forgot to record your breakfast")
 )
+
+val groupNames = listOf(
+    "GroupA", "GroupB", "GroupC", "GroupD"
+)
